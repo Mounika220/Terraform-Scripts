@@ -1,7 +1,0 @@
-rg_name = "testwebapp2202_group"
-location = "East US"
-webapp_name = "wa-mourev-dev"
-ASP_name = "ASP-mourev-dev"
-os_type = "Windows"
-sku_name = "Free"
-capacity = "F1"
