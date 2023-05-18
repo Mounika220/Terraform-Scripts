@@ -7,13 +7,14 @@ pipeline {
     stages {
         stage ("checkout from GIT") {
             steps {
-                git branch: 'Test', credentialsId: 'b4e1f9a6-8a58-4dc0-a9cb-5f0f63685305', url: 'https://github.com/Mounika220/Terraform-Scripts.git'
+                git branch: 'Dev', credentialsId: '02b803e5-b2c6-4abf-a5a4-b42f72e2a47f', url: 'https://github.com/Mounika220/Terraform-Scripts.git'
             }
         }
         stage ("terraform init") {
             steps {
-                dir("Resourcegroup")
-                sh 'terraform init'
+                dir("Resourcegroup"){
+                    sh 'terraform init'
+                }
             }
         }
         stage ("terraform fmt") {
@@ -24,16 +25,6 @@ pipeline {
         stage ("terraform validate") {
             steps {
                 sh 'terraform validate'
-            }
-        }
-        stage ("terrafrom plan") {
-            steps {
-                sh 'terraform plan '
-            }
-        }
-        stage ("terraform apply") {
-            steps {
-                sh 'terraform apply --auto-approve'
             }
         }
     }
