@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage ("checkout from GIT") {
             steps {
-                git branch: 'main', credentialsId: 'd3394a8d-c58e-4ad3-8f24-0cdecae05801', url: 'https://github.com/Mounika220/Terraform-Scripts.git'
+                git branch: 'main', credentialsId: 'b4e1f9a6-8a58-4dc0-a9cb-5f0f63685305', url: 'https://github.com/Mounika220/Terraform-Scripts.git'
             }
         }
         stage ("terraform init") {
