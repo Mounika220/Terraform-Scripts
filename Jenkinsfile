@@ -12,6 +12,7 @@ pipeline {
         }
         stage ("terraform init") {
             steps {
+                dir("Resourcegroup")
                 sh 'terraform init'
             }
         }
