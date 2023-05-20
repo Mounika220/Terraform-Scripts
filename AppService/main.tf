@@ -1,11 +1,10 @@
 module "rg" {
-    source = "./ResourceGroup"
+    source = "./module/RG"
     name = var.rg_name
     location = var.location
 }
 module "webapp" {
-  source = "./webapp"
-
+  source = "./module/webapp"
   name = var.webapp_name
   location = var.location
   sku_name = var.sku_name
