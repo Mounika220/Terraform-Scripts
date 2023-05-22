@@ -26,9 +26,8 @@ pipeline{
                         echo "Initialising Terraform"
                         terraform init -backend-config="access_key=$ARM_ACCESS_KEY"
                         """
-                      }
-                }   
-             }
+                    }
+            }   
         }
 
         stage('Terraform Validate'){
@@ -48,8 +47,7 @@ pipeline{
                         """
                      
                     }      
-                }
-             }
+            }
         }
 
         stage('Terraform Plan'){
@@ -89,6 +87,5 @@ pipeline{
                     }
             }
         }
-
-    }
+    }    
 }
